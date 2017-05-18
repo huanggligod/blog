@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	    * {
+	    	padding: 0;
+	    	margin: 0;
+            box-sizing: border-box;
+	    }
+
+	    ul,li {
+	    	list-style: none;
+	    }
+	    a {
+	    	text-decoration: none;
+	    	color: #000;
+	    }
+        body {
+            min-width: 1140px;
+        }
+	    .clearfix:after {
+	    	content: "";
+	    	display: block;
+	    	clear: both;
+	    }
+	    .clearfix {
+	    	*zoom:1;
+	    }
+        @font-face {
+            font-family: 'abc';  /* project id 302579 */
+            src: url('http://at.alicdn.com/t/font_snyktdwp6ab57b9.eot');
+            src: url('http://at.alicdn.com/t/font_snyktdwp6ab57b9.eot?#iefix') format('embedded-opentype'),
+            url('http://at.alicdn.com/t/font_snyktdwp6ab57b9.woff') format('woff'),
+            url('http://at.alicdn.com/t/font_snyktdwp6ab57b9.ttf') format('truetype'),
+            url('http://at.alicdn.com/t/font_snyktdwp6ab57b9.svg#iconfont') format('svg');
+        }
+        .layout{
+            width: 1140px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        /*头部开始*/
+        header {
+        	background: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg) no-repeat;
+        	background-size: cover;
+        	background-position: center center;
+        }
+        .navbar {
+        	position: fixed;
+        	top: 0;
+        	left: 0;
+        	right: 0;
+        	background: rgba(0,0,0,0.8);
+        	z-index: 100;
+        }
+        .navbar .nav-logo {
+        	font-size: 26px;
+        	color: #fed136;
+        	display: inline-block;
+        	padding: 15px 15px;
+        	font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+        }
+        .navbar .nav {
+        	float: right;
+        }
+        .navbar .nav>li {
+        	float: left;
+        	padding-top: 10px;
+        	padding-bottom: 10px;
+        }
+        .navbar .nav>li a {
+        	display: inline-block;
+        	color: #fff;
+        	margin-right: 30px;
+        	font-size: 18px;
+        	text-transform: uppercase;
+        	padding: 10px 10px;
+        }
+        .navbar .nav>li:first-child a {
+        	border-radius: 4px;
+        	background: #ccc;
+        	color: #000;
+        }
+        .intro-text {
+        	text-align: center;
+        	padding: 250px 0;
+        	color: #fff;
+        }
+        .intro-text1 {
+        	font-size: 40px;
+        	line-height: 40px;
+        	margin-bottom: 30px;
+            text-transform:capitalize;
+        	font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        .intro-text2 {
+        	font-size: 75px;
+        	line-height: 75px;
+        	font-weight: bold;
+        	margin-bottom: 50px;
+        	text-transform: uppercase;
+        	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        .more {
+            color: #fff;
+        	font-size: 18px;
+        	padding: 20px 30px;
+        	background: #fed136;
+        	border-radius: 3px;
+        	font-weight: bold;
+        	text-transform: uppercase;
+        	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        /*头部结束*/
+        /*services部分开始*/
+        #serv {
+        	text-align: center;
+            padding: 100px 0;
+        }
+        .common-top h1 {
+            font-size: 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        .common-top p {
+            color: #777;
+            font-style: italic;
+            font-size: 18px;
+            font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+            margin-top: 20px;
+            margin-bottom: 70px;
+        }
+        .serv-list {
+            width: 100%;
+        }
+        .serv-list li {
+            float: left;
+            width: 380px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .icon {
+            font-family:"abc";
+            font-size:16px;
+            font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .serv-icon {
+        	color: #fff;
+        	background: #fed136;
+        	font-size: 50px;
+  			padding: 20px 20px;
+            border-radius: 50%;
+        }
+        .icon-laptop:before {
+            content: "\ef12";
+            position: relative;
+            top: 4px;
+        }
+        .icon-shopcar:before { 
+            content: "\e60b";
+            position: relative;
+            left: -4px; 
+            top: 4px;
+        }
+        .icon-lock:before { 
+            content: "\e74c"; 
+            position: relative;
+            top: -4px;
+
+        }
+        .serv-list li>h4 {
+            margin-top: 40px;
+            font-weight: 800;
+            font-size: 18px;
+            font-family:  Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            margin-bottom: 20px;
+        }
+        .serv-list li>p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.5;
+            word-spacing: 1px;
+            font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        /*services部分结束*/
+        #port {
+            background: #f7f7f7;
+            padding: 150px 0;
+        }
+        #port .items .card {
+            width: 380px;
+            float: left;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 30px;
+        }
+        #port .items .card>a {
+            display:block; 
+            position: relative;
+            color: #fff;
+        }
+        
+        #port .items .port-hover  {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            background: rgba(254,209,54,.8);
+            transition: all .6s;
+        }
+        #port .items .port-hover:hover {
+            opacity: 1;
+        }
+        #port .items .port-hover-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -20px;
+            margin-left: -20px;    
+        }
+        .icon-add:before { 
+            content: "\e61d"; 
+            font-size: 40px;
+        }
+        #port .items .card img {
+            width: 100%;
+        }
+        #port .card-text {
+            background: #fff;
+            padding: 20px 0;
+        }
+        #port .card-text h3 {
+            font-weight: bold;
+            font-size: 18px;
+            font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            line-height: 1.75;
+        }
+        #port .card-text h4 {
+            font-size: 16px;
+            font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-weight: normal;
+            color: #777;
+            font-style: italic;    
+        }
+        /* portfolio结束 */
+        #about {
+            padding: 200px 0;
+        }
+        #about .about-list li {
+            position: relative;
+            padding: 0 0 125px 0;
+        }
+        #about .about-list li:last-child {
+            padding-bottom: 0;    
+        }
+        #about .about-list li:last-child .join {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border:7px solid #f1f1f1;
+            margin-right: auto;
+            margin-left: auto;
+            background: #fed136;
+        }
+        #about .about-list li:last-child .join p {
+            font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+            color: #fff;
+            line-height: 1.5;
+        }
+        #about .about-list li:after {
+            content: '';
+            display: block;
+            position: absolute;
+            margin-left: -1px;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            border-left: 2px solid #f1f1f1;
+            z-index: -1;
+        }
+        #about .about-list img {
+            width: 150px;
+            border:7px solid #f1f1f1;
+            border-radius: 50%;
+        }
+        #about .about-content {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 30em;
+            margin-right: 80px;
+            text-align: right;
+        }
+        #about .about-list li:nth-child(even)>.about-content {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 30em;
+            margin-left: 80px;
+            text-align: left;
+        }
+        #about .about-content h3 {
+            font-family:  Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        #about .about-content>p {
+            padding: 0;
+            margin: 0;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+        /*about结束*/
+        #team {
+            background: #f7f7f7;
+            padding: 150px 0;
+        } 
+        #team .team-cards h3 {
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        #team .team-cards h4 {
+            font-size: 15px;
+            color: #777;
+            line-height: 1.5;
+        }
+        #team .team-cards li {
+            width: 33.33%
+        }
+        #team .team-cards>li {
+            float: left;
+            margin-bottom: 50px;
+        }
+        #team .team-cards>li img {
+            border-radius: 50%;
+            border:7px solid #f1f1f1;
+            margin-bottom: 30px;
+        }
+         .team-icon {
+            margin-top: 20px;
+        }
+         .team-icon>span {
+            padding:10px;
+            background: #222;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+        #team .long-text {
+            font-size: 16px;
+            line-height: 1.75;
+            color: #777;
+            font-style: normal;
+            font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        /*about结束*/
+        
+        .logobar .logo-list>li {
+            float: left;
+            width: 25%;
+        }
+        .logobar .logo-list>li img {
+            padding: 50px;
+        }
+        .contact {
+            background:#222 url('./img/map-image.png') center no-repeat;
+            padding: 150px 0;
+        }
+        .contact h1 {
+            color: #fff;
+        }
+        .contact #contactForm {
+            overflow: hidden;
+        }
+        .contact .input-col,
+        .contact .text-col {
+            float: left;
+            width: 50%;
+            padding: 0 15px;
+            margin-bottom: 30px;
+
+        }
+        .contact .input-col>input {
+            display: block;
+            outline: none;
+            border:none;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 3px;
+            border:1px solid #ccc;
+        }
+        .contact .text-col>textarea {
+            width: 100%;
+            height: 234px;
+            padding: 20px;
+            display: block;
+            font-size: 14px;
+            color: #555;
+            border:1px solid #ccc;
+            border-radius: 4px;
+            overflow: auto;
+            -webkit-input-placeholder:"You Message*";
+        }
+        .contact .sub {
+            width: 100%;
+            float: left;
+            text-align: center;
+            padding: 0 10px;
+        }
+        .contact .sub>.btn{
+            
+            padding: 20px 30px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: #fec503;
+            border-color: #fec503;
+            text-align: center;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px 0;
+            
+        }
+        .footer>p {
+            line-height: 40px;
+            color: #333;
+            vertical-align: middle;
+        }
+        .footer>.team-icon {
+            vertical-align: middle;
+            margin-top: 8px;
+        }
+        .footer .Privacy-link>a {
+            color: #fed136;
+            line-height: 40px;
+            font-size: 16px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .footer .Privacy-link>a:hover {
+            text-decoration: underline;
+            color: #fec503;
+        }
+	</style>
+	</head>
+	<header>
+		<div class="navbar">
+		    <div class="layout   clearfix">
+				<a href="#" class="nav-logo">Start Bootstrap</a>
+				<ul class="nav clearfix">
+					<li><a href="#">services</a></li>
+					<li><a href="#">portfolio</a></li>
+					<li><a href="#">about</a></li>
+					<li><a href="#">team</a></li>
+					<li><a href="#">contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="intro-text layout">
+			<p class="intro-text1">Welcome To Our Studio!</p>
+			<p class="intro-text2">it's nice to meet you</p>
+			<a class="more">tell me more</a>
+		</div>
+	</header>
+	<div id="serv" class="layout common-top">       
+		<h1>services</h1>
+		<p>Lorem ipsum dolor sit amet consectetur.</p>
+    		<ul class="serv-list clearfix">
+    			<li>
+    				<span class="icon serv-icon icon-shopcar"></span>
+    				<h4>E-Commerce</h4>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+    			</li>
+    			<li>
+                    <span class="icon serv-icon icon-laptop"></span>
+                    <h4>Responsive Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </li>
+                <li>
+                    <span class="icon serv-icon icon-lock"></span>
+                    <h4>Web Security</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </li>
+    		</ul>
+	</div>
+    <div id="port" class="common-top">
+        <div class="layout">
+            <h1>PORTFOLIO</h1>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <ul class="items clearfix">
+                <li class="card">
+                    <a href="#">
+                        <div class="port-hover">
+                            <span class="icon port-hover-icon icon-add"></span>  
+                        </div>
+                        <img src="img/card1.png" alt="">
+                    </a>
+                    <div class="card-text">
+                        <h3>Round Icons</h3>
+                        <h4>Graphic Design</h4>
+                    </div>
+                </li>
+                <li class="card">
+                    <a href="#">
+                        <div class="port-hover">
+                            <span class="icon port-hover-icon icon-add"></span>  
+                        </div>
+                        <img src="img/card2.png" alt="">
+                    </a>
+                    <div class="card-text">
+                        <h3>Round Icons</h3>
+                        <h4>Graphic Design</h4>
+                    </div>
+                </li>
+                <li class="card">
+                    <a href="#">
+                        <div class="port-hover">
+                            <span class="icon port-hover-icon icon-add"></span>  
+                        </div>
+                        <img src="img/card3.png" alt="">
+                    </a>
+                    <div class="card-text">
+                        <h3>Round Icons</h3>
+                        <h4>Graphic Design</h4>
+                    </div>
+                </li>
+                <li class="card">
+                    <a href="#">
+                        <div class="port-hover">
+                            <span class="icon port-hover-icon icon-add"></span>  
+                        </div>
+                        <img src="img/card4.png" alt="">
+                    </a>
+                    <div class="card-text">
+                        <h3>Round Icons</h3>
+                        <h4>Graphic Design</h4>
+                </div>
+                <li class="card">
+                    <a href="#">
+                        <div class="port-hover">
+                            <span class="icon port-hover-icon icon-add"></span>  
+                        </div>
+                        <img src="img/card5.png" alt="">
+                    </a>
+                    <div class="card-text">
+                        <h3>Round Icons</h3>
+                        <h4>Graphic Design</h4>
+                </div>
+                <li class="card">
+                    <a href="#">
+                        <div class="port-hover">
+                            <span class="icon port-hover-icon icon-add"></span>  
+                        </div>
+                        <img src="img/card6.png" alt="">
+                    </a>
+                    <div class="card-text">
+                        <h3>Round Icons</h3>
+                        <h4>Graphic Design</h4>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div id="about" class="common-top">
+        <div class="layout">
+            <h1>about</h1>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <ol class="about-list">
+                <li>
+                    <img src="img/about1.jpg" alt="">
+                    <div class="about-content">
+                        <h3>2009-2011</h3>
+                        <h3>our humble beginnings</h3>
+                        <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>   
+                    </div> 
+                </li>
+               <li>
+                    <img src="img/about2.jpg" alt="">
+                    <div class="about-content">
+                        <h3>2009-2011</h3>
+                        <h3>our humble beginnins</h3>
+                        <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>   
+                    </div> 
+                </li>
+                <li>
+                    <img src="img/about3.jpg" alt="">
+                    <div class="about-content">
+                        <h3>2009-2011</h3>
+                        <h3>our humble beginnings</h3>
+                        <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>   
+                    </div> 
+                </li>
+                <li>
+                    <img src="img/about4.jpg" alt="">
+                    <div class="about-content">
+                        <h3>2009-2011</h3>
+                        <h3>our humble beginnings</h3>
+                        <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>   
+                    </div> 
+                </li>
+                <li>
+                    <div class="join">
+                        <p>be part <br>
+                           of our <br>
+                           story !
+                        </p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div id="team" class="common-top">
+        <div class="layout">
+            <h1>our amazing team</h1>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <ul class="team-cards clearfix">
+                <li>
+                    <img src="img/team1.jpg" alt="">
+                    <h3>Kay Garland</h3>
+                    <h4>Lead Designer</h4>
+                    <div class="team-icon iconfont">
+                        <span class="icon icon-twitter">&#xe634;</span>
+                        <span class="icon icon-facebook">&#xe600;</span>
+                        <span class="icon icon-linkedin">&#xe62e;</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/team2.jpg" alt="">
+                    <h3>Kay Garland</h3>
+                    <h4>Lead Designer</h4>
+                    <div class="team-icon">
+                        <span class="icon icon-twitter">&#xe634;</span>
+                        <span class="icon icon-facebook">&#xe600;</span>
+                        <span class="icon icon-linkedin">&#xe62e;</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/team3.jpg" alt="">
+                    <h3>Kay Garland</h3>
+                    <h4>Lead Designer</h4>
+                    <div class="team-icon">
+                        <span class="icon icon-twitter">&#xe634;</span>
+                        <span class="icon icon-facebook">&#xe600;</span>
+                        <span class="icon icon-linkedin">&#xe62e;</span>
+                    </div>
+                </li>
+            </ul>
+             <p class="long-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis <br>ad perspiciatis, totam corporis ea, alias ut unde.</p>
+        </div>
+    </div>
+    <div class="logobar">
+        <div class="layout">
+            <ul class="logo-list clearfix">
+                <li><a href="#"><img src="img/envato.jpg" alt="envato-logo"></a></li>
+                <li><a href="#"><img src="img/designmodo.jpg" alt="designmodo-logo"></a></li>
+                <li><a href="#"><img src="img/themeforest.jpg" alt="themeforest-logo"></a></li>
+                <li><a href="#"><img src="img/creative-market.jpg" alt="creative-logo"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="contact common-top">
+        <div class="layout">
+            <h1>contact us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <form name="sentMessage" id="contactForm" class="clearfix">
+                <div class="input-col">
+                    <input type="text" placeholder="Your Name*" id="name">
+                    <input type="text" placeholder="Your Email*" id="email">
+                    <input type="text" placeholder="Your Phone*" id="phone">
+                </div>
+                <div class="text-col">
+                    <textarea placeholder="You Message*"></textarea>
+                </div>
+                <div class="sub">
+                    <button class="btn">Send Message</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p class="copy">Copyright © Your Website 2014</p>
+        <div class="team-icon">
+            <span class="icon icon-twitter">&#xe634;</span>
+            <span class="icon icon-facebook">&#xe600;</span>
+            <span class="icon icon-linkedin">&#xe62e;</span>
+        </div>
+        <div class="Privacy-link">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+    </div>
+</body>     
+</html>
