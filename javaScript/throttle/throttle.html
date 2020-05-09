@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>throttle</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+
+    </div>
+</body>
+<script>
+    var container = document.getElementById('container')
+    function throttle(func, wait) {
+        var that, args
+        var previous = 0
+
+        return function() {
+            var now = +new Date()
+            that = this
+            args = arguments
+            if (now - previous > wait) {
+                func.apply(that, args)
+                previous = now
+            }
+        }
+    }
+    function getHtml(e) {
+        var p = document.createElement('p')
+        p.innerHTML = 'p'
+        container.appendChild(p)
+    }
+    container.onmousemove = throttle(getHtml, 1000)
+
+</script>
+</html>
