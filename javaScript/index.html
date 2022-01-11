@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="module">
+    import DoublyLinkedList from './doublyLink.js'
+    import LinkedList from './迭代器.js'
+    const list = new DoublyLinkedList()
+
+    list.insertFirst(1)
+    list.insertFirst(2)
+    list.insertAt(1, 3)
+
+    list.reverse()
+    const arr = list.nodes
+    console.log(arr)
+
+    const myList = new LinkedList([
+        { id: 'a10', value: 'First', next: 'a13', head: true },
+        { id: 'a11', value: 'Last', next: null, head: false },
+        { id: 'a12', value: 'Third', next: 'a11', head: false },
+        { id: 'a13', value: 'Second', next: 'a12', head: false },
+    ]);
+
+    for (let item of myList) {
+        console.log(item); // 'First', 'Second', 'Third', 'Last'
+    }
+</script>
+</html>
